@@ -1,38 +1,60 @@
 {
-  "name": "hello",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0"
-  },
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "playwright_test": "playwright test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./webpack/webpack.prod.js",
+    "format": "npx prettier --write ."
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "devDependencies": {
-    "@playwright/test": "^1.22.2"
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "core-js": "2.6.5",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "lint-staged": "^12.3.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "2.5.1",
+    "react-loadable": "^5.5.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "axios": "^0.26.1",
+    "bootstrap": "^4.4.0",
+    "dateformat": "^3.0.3",
+    "react": "16.8.6",
+    "react-csv-downloader": "^2.7.1",
+    "react-datepicker": "^2.8.0",
+    "react-dom": "16.8.6",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "react-select": "^5.2.2",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   }
 }
