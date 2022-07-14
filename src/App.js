@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 
 async function getUser() {
   try {
-    const response = await axios.get('/app/users');
+    const response = await axios.get('/api/users');
     console.log(response);
+    return response.data
   } catch (error) {
     console.error(error);
   }
